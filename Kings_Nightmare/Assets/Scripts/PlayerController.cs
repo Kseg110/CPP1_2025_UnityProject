@@ -1,73 +1,87 @@
-using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))] // ensures that rb component is present and is great defenseive programming and ensures we have access to our physics components 
-
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-    //[Serializefield] private bool isGrounded = false; // check if player is grounded (checks every frame)
+    // this transform is used to check if the player is grounded only needed if the ground check position is generated and a seperate object
+    //private Transform groundCheckPos;
+
+    [SerializeField] private float groundCheckRadius = 0.02f; // Radius for ground check, adjust as necessary
+
+    [SerializeField] private bool isGrounded = false;
     private LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Collider2D col;
-    private GroundCheck groundCheck;
+    private Animator anim;
 
-    [SerializeField] private int maxJump = 1; // Maximum number of jumps allowed
+    [SerializeField] private int maxJumpCount = 1; // Maximum number of jumps allowed (e.g., double jump)
     private int jumpCount = 1;
 
-    private Vector2 groundCheckPos;
-    Vector2 GetGroundCheckPos() => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
-
-
+    private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //rb = TryGetComponent<Rigidbody2D>(out rb); // good for checking if rb exists 
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
 
-        groundLayer = LayerMask.GetMask("Ground"); // can be used for checks against the ground layer
+        groundLayer = LayerMask.GetMask("Ground");
 
-            //if (rb != null) Debug.Log($"RigidBody Exists {rb.name}"); // debug for console to check if rb exists on object and the name of object 
-                //rb.gravityScale = 0f; // disables gravity to check for sprite rb
+        if (groundLayer == 0)
+            Debug.LogWarning("Ground layer not set. Please set the Ground layer in the LayerMask.");
 
-        //Initialize ground check position if using a separate GameObject for ground checking, such as a child of the player GameObject
-            //GameObject newObj = new GameObject("GroundCheck");
-            //newObj.transform.SetParent(transform);
-            //newObj.transform.localPosition = Vector3.zero; // Set to player's Position
-            //groundCheckPos = newObj.transform;
+        // Initialize ground check position if using a separate GameObject for ground checking
+        //GameObject newObj = new GameObject("GroundCheck");
+        //newObj.transform.SetParent(transform);
+        //newObj.transform.localPosition = Vector3.zero; // Set to the player's position
+        //groundCheckPos = newObj.transform;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float hValue = Input.GetAxis("Horizontal");
+        float hValue = Input.GetAxisRaw("Horizontal");
         SpriteFlip(hValue);
-        groundCheckPos = GetGroundCheckPos();
+        //Debug.Log("Ground Check Position: " + groundCheckPos);
 
-        rb.linearVelocityX = hValue * 5f; // Adjust Speed as necessary here
+        rb.linearVelocityX = hValue * 5f; // Adjust speed as necessary
+        isGrounded = Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
 
         if (Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse); //Adjust jump for as necessary here
-        }
+            if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
+            {
+                rb.AddForce(Vector2.up * 1f, ForceMode2D.Impulse); // Adjust jump force as necessary
+                rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse); // Adjust jump force as necessary
+                jumpCount++;
+                //Debug.Log("Jump Count: " + jumpCount);
+            }
+
+        if (isGrounded)
+            jumpCount = 1; // Reset jump count when grounded
+
+        // Update animator parameters
+        anim.SetFloat("hValue", Mathf.Abs(hValue));
+        anim.SetBool("isGrounded", isGrounded);
     }
 
     void SpriteFlip(float hValue)
     {
-            //if (hValue < 0)
-            //    sr.flipX = true;
-            //else if (hValue > 0)
-            //    sr.flipX = false; //   this "if else statement" checks for flipped sprite every single frame 
+        //if (hValue < 0)
+        //    sr.flipX = true;
+        //else if (hValue > 0)
+        //    sr.flipX = false;
+        if (hValue != 0) sr.flipX = (hValue < 0); // Simplified sprite flipping logic
 
-        if (hValue != 0) sr.flipX = (hValue < 0); // simplified sprite flipping logic, doesn't check every frame
-            // ^^if at the start fixes flip snap back
-
-            //if ((hValue > 0 && sr.flipX) || (hValue < 0 && !sr.flipX))
-            //    sr.flipX = !sr.flipX; 
-            // flip sprite only when direction changes - only when neccesary 
+        //if ((hValue > 0 && sr.flipX) || (hValue < 0 && !sr.flipX))
+        //    sr.flipX = !sr.flipX; // Flip sprite only when direction changes
     }
+
 }
