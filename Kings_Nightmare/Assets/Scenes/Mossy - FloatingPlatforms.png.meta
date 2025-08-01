@@ -140,7 +140,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_0
+      name: 0_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 114
@@ -148,7 +148,7 @@ TextureImporter:
         width: 260
         height: 321
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
         width: 17
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,7 +184,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_2
+      name: 2_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 477
@@ -192,7 +192,7 @@ TextureImporter:
         width: 1052
         height: 454
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,15 +206,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_3
+      name: 3_FloatingPlatforms
       rect:
         serializedVersion: 2
-        x: 1593
+        x: 1590
         y: 1061
         width: 451
         height: 944
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 9
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_5
+      name: 5_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 46
@@ -258,7 +258,7 @@ TextureImporter:
         width: 383
         height: 372
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,15 +272,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_6
+      name: 6_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 496
-        y: 1058
+        y: 1061
         width: 1052
         height: 454
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_7
+      name: 7_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 111
@@ -302,7 +302,7 @@ TextureImporter:
         width: 286
         height: 318
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -316,7 +316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_8
+      name: 8_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 436
@@ -324,7 +324,7 @@ TextureImporter:
         width: 1564
         height: 454
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - FloatingPlatforms_9
+      name: 9_FloatingPlatforms
       rect:
         serializedVersion: 2
         x: 19
@@ -346,7 +346,7 @@ TextureImporter:
         width: 2016
         height: 454
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1d508ab91ff4ae747833429b4d0d072d
     internalID: 0
     vertices: []
     indices: 
@@ -373,16 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mossy - FloatingPlatforms_0: -2527406384049011000
+      0_FloatingPlatforms: -2527406384049011000
+      2_FloatingPlatforms: 3758862390733383049
+      3_FloatingPlatforms: 927450667673174160
+      5_FloatingPlatforms: 6504452907052581091
+      6_FloatingPlatforms: 9153258738859498887
+      7_FloatingPlatforms: 1378068251089034365
+      8_FloatingPlatforms: -2564032576524098436
+      9_FloatingPlatforms: 6823571529453442794
       Mossy - FloatingPlatforms_1: -5043810790546849346
-      Mossy - FloatingPlatforms_2: 3758862390733383049
-      Mossy - FloatingPlatforms_3: 927450667673174160
       Mossy - FloatingPlatforms_4: 1823048953446468025
-      Mossy - FloatingPlatforms_5: 6504452907052581091
-      Mossy - FloatingPlatforms_6: 9153258738859498887
-      Mossy - FloatingPlatforms_7: 1378068251089034365
-      Mossy - FloatingPlatforms_8: -2564032576524098436
-      Mossy - FloatingPlatforms_9: 6823571529453442794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
