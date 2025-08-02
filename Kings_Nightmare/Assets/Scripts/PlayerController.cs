@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     //private Transform groundCheckPos;
 
     [SerializeField] private float groundCheckRadius = 0.02f; // Radius for ground check, adjust as necessary
-
+    [SerializeField] private bool attack1 = false;
     [SerializeField] private bool isGrounded = false;
     private LayerMask groundLayer;
 
@@ -64,12 +64,23 @@ public class PlayerController : MonoBehaviour
                 //Debug.Log("Jump Count: " + jumpCount);
             }
 
+        if (Input.GetButtonDown("Fire1"))
+            attack1 = true;
+
+        // Check if attack1 animation is done
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if (attack1 && stateInfo.IsName("attack1") && stateInfo.normalizedTime >= 1.0f)
+        {
+            attack1 = false;
+        }
+
         if (isGrounded)
             jumpCount = 1; // Reset jump count when grounded
 
         // Update animator parameters
         anim.SetFloat("hValue", Mathf.Abs(hValue));
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("attack1", attack1);
     }
 
     void SpriteFlip(float hValue)
