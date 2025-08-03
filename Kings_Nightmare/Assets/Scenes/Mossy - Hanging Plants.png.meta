@@ -148,7 +148,7 @@ TextureImporter:
         width: 365
         height: 1179
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
         width: 365
         height: 978
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,7 +184,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - Hanging Plants_2
+      name: Hanging Plants_2
       rect:
         serializedVersion: 2
         x: 912
@@ -192,7 +192,7 @@ TextureImporter:
         width: 364
         height: 978
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
         width: 306
         height: 822
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 269
         height: 951
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - Hanging Plants_5
+      name: Hanging Plants_5
       rect:
         serializedVersion: 2
         x: 88
@@ -258,7 +258,7 @@ TextureImporter:
         width: 468
         height: 1377
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,7 +280,7 @@ TextureImporter:
         width: 468
         height: 1377
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mossy - Hanging Plants_7
+      name: Hanging Plants_7
       rect:
         serializedVersion: 2
         x: 1178
@@ -302,7 +302,7 @@ TextureImporter:
         width: 761
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -324,7 +324,7 @@ TextureImporter:
         width: 761
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -346,7 +346,7 @@ TextureImporter:
         width: 761
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 74fb3f8e54071f747ade188e621bbae4
     internalID: 0
     vertices: []
     indices: 
@@ -373,14 +373,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Hanging Plants_2: -3643801988075151291
+      Hanging Plants_5: -5342899683599240943
+      Hanging Plants_7: 3986061963867474379
       Mossy - Hanging Plants_0: -6297841393305379348
       Mossy - Hanging Plants_1: -9120406111138420596
-      Mossy - Hanging Plants_2: -3643801988075151291
       Mossy - Hanging Plants_3: 6343888730784975065
       Mossy - Hanging Plants_4: -1960693398722581246
-      Mossy - Hanging Plants_5: -5342899683599240943
       Mossy - Hanging Plants_6: -3722490455595391638
-      Mossy - Hanging Plants_7: 3986061963867474379
       Mossy - Hanging Plants_8: -8677164435290038233
       Mossy - Hanging Plants_9: -5427887325597579183
   mipmapLimitGroupName: 

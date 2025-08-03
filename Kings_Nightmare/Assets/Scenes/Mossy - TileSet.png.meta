@@ -291,10 +291,10 @@ TextureImporter:
       name: 7_TileSet
       rect:
         serializedVersion: 2
-        x: 2078
-        y: 30
-        width: 1477
-        height: 1478
+        x: 2080
+        y: 31
+        width: 1473
+        height: 1477
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
