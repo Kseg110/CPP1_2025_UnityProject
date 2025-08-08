@@ -155,7 +155,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_0
+      name: atck_bat_01
       rect:
         serializedVersion: 2
         x: 1
@@ -177,7 +177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_1
+      name: atck_bat_02
       rect:
         serializedVersion: 2
         x: 18
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_2
+      name: atck_bat_03
       rect:
         serializedVersion: 2
         x: 35
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_3
+      name: atck_bat_04
       rect:
         serializedVersion: 2
         x: 51
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_4
+      name: atck_bat_05
       rect:
         serializedVersion: 2
         x: 64
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_5
+      name: idle_bat_01
       rect:
         serializedVersion: 2
         x: 1
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_6
+      name: idle_bat_02
       rect:
         serializedVersion: 2
         x: 18
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_7
+      name: idle_bat_03
       rect:
         serializedVersion: 2
         x: 34
@@ -331,7 +331,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_8
+      name: idle_bat_04
       rect:
         serializedVersion: 2
         x: 50
@@ -353,7 +353,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_9
+      name: idle_bat_05
       rect:
         serializedVersion: 2
         x: 64
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_10
+      name: dying_bat_01
       rect:
         serializedVersion: 2
         x: 0
@@ -397,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_11
+      name: dying_bat_02
       rect:
         serializedVersion: 2
         x: 18
@@ -419,7 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_12
+      name: dying_bat_03
       rect:
         serializedVersion: 2
         x: 35
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_13
+      name: dying_bat_04
       rect:
         serializedVersion: 2
         x: 50
@@ -463,7 +463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_Sprite_Sheet_14
+      name: dying_bat_05
       rect:
         serializedVersion: 2
         x: 64
@@ -498,21 +498,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bat_Sprite_Sheet_0: 4754826937556007664
-      Bat_Sprite_Sheet_1: 1950037884440723967
-      Bat_Sprite_Sheet_10: -2791781109115073848
-      Bat_Sprite_Sheet_11: 8168114191162194413
-      Bat_Sprite_Sheet_12: -8739512748087090192
-      Bat_Sprite_Sheet_13: -3898697172571309750
-      Bat_Sprite_Sheet_14: 4408200414677511765
-      Bat_Sprite_Sheet_2: -4967168449681225887
-      Bat_Sprite_Sheet_3: 226292761361202779
-      Bat_Sprite_Sheet_4: -3113498109430736489
-      Bat_Sprite_Sheet_5: -8492286351371643537
-      Bat_Sprite_Sheet_6: -6485103073066414344
-      Bat_Sprite_Sheet_7: -6033406130653863735
-      Bat_Sprite_Sheet_8: -4460476777046176274
-      Bat_Sprite_Sheet_9: 4297251893678942116
+      atck_bat_01: 4754826937556007664
+      atck_bat_02: 1950037884440723967
+      atck_bat_03: -4967168449681225887
+      atck_bat_04: 226292761361202779
+      atck_bat_05: -3113498109430736489
+      dying_bat_01: -2791781109115073848
+      dying_bat_02: 8168114191162194413
+      dying_bat_03: -8739512748087090192
+      dying_bat_04: -3898697172571309750
+      dying_bat_05: 4408200414677511765
+      idle_bat_01: -8492286351371643537
+      idle_bat_02: -6485103073066414344
+      idle_bat_03: -6033406130653863735
+      idle_bat_04: -4460476777046176274
+      idle_bat_05: 4297251893678942116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -331,7 +331,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle
-  m_Speed: 1
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5817133957501228390}
@@ -391,6 +391,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isGrounded
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: hValue
+    m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1830930044805477053}
   m_Solo: 0
@@ -434,7 +437,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: Player_Anims
     m_StateMachine: {fileID: 4526624954742519603}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -537,7 +540,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: Player_Anims
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1830930044805477053}
@@ -553,7 +556,7 @@ AnimatorStateMachine:
     m_Position: {x: 130, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8825587783179826165}
-    m_Position: {x: 480, y: 340, z: 0}
+    m_Position: {x: 420, y: 360, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

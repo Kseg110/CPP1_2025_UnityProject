@@ -58,8 +58,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
             {
+                rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse); // Adjust jump force as necessary
                 rb.AddForce(Vector2.up * 1f, ForceMode2D.Impulse); // Adjust jump force as necessary
-                rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse); // Adjust jump force as necessary
                 jumpCount++;
                 //Debug.Log("Jump Count: " + jumpCount);
             }
