@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     private float initialGroundCheckRadius;
 
     [SerializeField] private int maxJumpCount = 2; // Maximum number of jumps allowed (e.g., double jump)
-    private int jumpCount = 0;
+    private int jumpCount = 1;
 
     private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocityX = hValue * 5f; // Adjust speed as necessary
         groundCheck.CheckIsGrounded();
+        isGrounded = groundCheck.IsGrounded;
 
 
         // jump input check
@@ -147,8 +148,8 @@ public class PlayerController : MonoBehaviour
             attack1 = false;
         }
 
-        if (isGrounded == true)
-            jumpCount = 0; // Reset jump count when grounded
+        if (isGrounded)
+            jumpCount = 1; // Reset jump count when grounded
 
         // Update animator parameters
         anim.SetFloat("hValue", Mathf.Abs(hValue));
