@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.02f; // Radius for ground check, adjust as necessary
     [SerializeField] private bool attack1 = false;
     [SerializeField] private bool isGrounded = false;
+ 
     private LayerMask groundLayer;
 
     private Rigidbody2D rb;
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxJumpCount = 2; // Maximum number of jumps allowed (e.g., double jump)
     private int jumpCount = 1;
 
-    private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
+    //private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -107,6 +108,8 @@ public class PlayerController : MonoBehaviour
         groundCheck = new GroundCheck(col, groundLayer, groundCheckRadius);
         initialGroundCheckRadius = groundCheckRadius;
 
+
+        //Prior ground check before refactor and creation of GroundCheck.cs
         // Initialize ground check position if using a separate GameObject for ground checking
         //GameObject newObj = new GameObject("GroundCheck");
         //newObj.transform.SetParent(transform);
@@ -121,6 +124,7 @@ public class PlayerController : MonoBehaviour
     {
         float hValue = Input.GetAxisRaw("Horizontal");
         float vValue = Input.GetAxisRaw("Vertical");
+        AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
         SpriteFlip(hValue);
         //Debug.Log("Ground Check Position: " + groundCheckPos);
 
@@ -138,10 +142,19 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Jump Count: " + jumpCount);
          }
 
+        if (!currentState.IsName("suriken")&& Input.GetButtonDown("Fire2"))
+        {
+            anim.SetTrigger("shoot"); //initial swing aniamtion for projectile
+        }
+        if (currentState.IsName("shoot"))
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
         if (Input.GetButtonDown("Fire1"))
             attack1 = true;
 
-        // Check if attack1 animation is done
+        // Check if attack1 animation is done (prevent infinite attack bug)
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
         if (attack1 && stateInfo.IsName("attack1") && stateInfo.normalizedTime >= 1.0f)
         {
