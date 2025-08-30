@@ -28,9 +28,9 @@ public class WalkerEnemy : Enemy
     {
         if (damageType == DamageType.Default)
         {
-            anim.SetTrigger("death_bat");
+            anim.SetTrigger("dead");
             // Destroy the enemy after the death animation is complete
-            Destroy(transform.parent.gameObject, 0.5f); // Adjust the delay as needed for the animation
+            Destroy(transform.parent.gameObject, 1f); // Adjust the delay as needed for the animation
             return;
         }
 

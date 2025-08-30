@@ -16,7 +16,7 @@ public class Shoot : MonoBehaviour
 
         if (initShotVelocity == Vector2.zero)
         {
-            initShotVelocity = new Vector2(10f, 0f); // Default shot velocity if not set
+            initShotVelocity = new Vector2(6f, 0f); // Default shot velocity if not set
             Debug.LogWarning("Initial shot velocity not set. Using default value: " + initShotVelocity);
         }
 
@@ -43,3 +43,5 @@ public class Shoot : MonoBehaviour
         }
     }
 }
+
+

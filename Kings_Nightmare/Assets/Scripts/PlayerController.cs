@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEditor;
+using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
@@ -136,7 +137,7 @@ public class PlayerController : MonoBehaviour
         // jump input check
         if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
         {
-            rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse); // Adjust jump force as necessary
+            rb.AddForce(Vector2.up * 4f, ForceMode2D.Impulse); // Adjust jump force as necessary
             rb.AddForce(Vector2.up * 1f, ForceMode2D.Impulse); // Adjust jump force as necessary
             jumpCount++;
             //Debug.Log("Jump Count: " + jumpCount);
@@ -201,7 +202,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    { // created a collision with patrol enemy for basic melee attack
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if (collision.CompareTag("Enemy") && stateInfo.IsName("attack1"))
+        {
+            collision.GetComponentInParent<Enemy>().TakeDamage(0, DamageType.Default);
+        }
+
 
     }
 
